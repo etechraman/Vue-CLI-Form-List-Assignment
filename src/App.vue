@@ -34,23 +34,19 @@ export default {
       Vue.set(this.data, editIndex, name);
       this.name = "";
       this.editIndex = -1;
-      console.log("editing");
     },
     submit(name) {
-      console.log("Submitted");
       this.data.push(name);
       this.name = "";
     },
     deleteItem(index) {
       this.data.splice(index, 1);
-      console.log("deleted");
     },
     editItem(index) {
       this.editIndex = index;
       this.name = this.data[index];
     },
     clear() {
-      console.log("Clicked");
       this.editIndex = -1;
     },
   },
